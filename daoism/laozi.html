@@ -5,7 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>道德经</title>
   <link rel="stylesheet" href="../style/reset.css">
-  <script>
+  <script type="module">
+    import {stringToHtmlElement} from "../javascript/string-to-html-element.js";
+
     const DaoismString = `1. 道可道，非常道。
   名可名，非常名。
   无名天地之始。有名万物之母。
@@ -541,26 +543,13 @@
   既以与人己愈多。
   天之道利而不害。
   圣人之道为而不争。`
-    const list = DaoismString.split('\n').map(item=>item.trim());
-    const div = document.createElement('div');
-    list.forEach(item=>{
-      if(!item){
-        div.appendChild(document.createElement('br'));
-      }
-      const startWithNumber = item.match(/^\d+\./);
-      if(startWithNumber){
-        const numberStringWidthDot = startWithNumber[0];
-        const numberString = numberStringWidthDot.replace('.','');
-        const p = document.createElement('p');
-        p.innerText = numberString;
-        div.appendChild(p);
-        item = item.replace(numberStringWidthDot,'');
-      }
-      const p = document.createElement('p');
-      p.innerText = item;
-      div.appendChild(p);
+    /**
+     * convert all \d{1,3}\. to \d{1,3}\.\n
+     */
+    const newDaoismString = DaoismString.replace(/\d{1,3}\./g, (match) => {
+      return match + '\n'
     });
-    setTimeout(()=>document.body.appendChild(div));
+    setTimeout(()=>document.body.appendChild(stringToHtmlElement(newDaoismString)));
   </script>
 </head>
 <body>
