@@ -10,7 +10,6 @@ export const P = (str) => {
 export const stringToHtmlElement = (str) => {
   const div = document.createElement('div');
   const lines = str.split('\n').map((line) => line.trim());
-  console.log(lines);
   lines.forEach((line) => {
     div.appendChild(P(line));
   });
@@ -18,3 +17,7 @@ export const stringToHtmlElement = (str) => {
 }
 
 export const toHtml = stringToHtmlElement;
+
+export const bodyAppend = (str) => {
+  document.body.appendChild(toHtml(str));
+}
