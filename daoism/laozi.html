@@ -547,6 +547,15 @@
       if(!item){
         div.appendChild(document.createElement('br'));
       }
+      const startWithNumber = item.match(/^\d+\./);
+      if(startWithNumber){
+        const numberStringWidthDot = startWithNumber[0];
+        const numberString = numberStringWidthDot.replace('.','');
+        const p = document.createElement('p');
+        p.innerText = numberString;
+        div.appendChild(p);
+        item = item.replace(numberStringWidthDot,'');
+      }
       const p = document.createElement('p');
       p.innerText = item;
       div.appendChild(p);
