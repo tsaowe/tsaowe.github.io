@@ -21,3 +21,19 @@ export const toHtml = stringToHtmlElement;
 export const bodyAppend = (str) => {
   document.body.appendChild(toHtml(str));
 }
+
+export const allHtml = (str='') => {
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../style/reset.css">
+  <title>TODO</title>
+</head>
+<body>
+  ${str}
+</body>
+</html>
+`
+}
