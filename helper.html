@@ -32,7 +32,7 @@
 
 <script type="module">
   import {allHtml, toHtml} from "./javascript/string-to-html-element.js";
-
+  document.getElementById('output').value = allHtml('');
   document.getElementById('input').addEventListener('input', (e) => {
     const input = e.target.value;
     const html = toHtml(input);
