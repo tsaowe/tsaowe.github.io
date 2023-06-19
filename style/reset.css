@@ -73,3 +73,9 @@ a {
         color: rgba(191, 227, 238, 0.6);
     }
 }
+
+.sub {
+    font-size: 80%;
+    opacity: 0.8;
+    margin-bottom: 1.5em;
+}
