@@ -159,3 +159,15 @@ blockquote {
   font-size: 60%;
   opacity: 0.8;
 }
+
+blockquote {
+  display: flex;
+}
+
+blockquote:before {
+  content: " ";
+  display: block;
+  width: 1px;
+  margin-right: 4px;
+  border-right: 4px solid rgba(0, 0, 0, 0.1);
+}
