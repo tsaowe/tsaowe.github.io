@@ -168,6 +168,6 @@ blockquote:before {
   content: " ";
   display: block;
   width: 1px;
-  margin-right: 4px;
+  margin-right: 8px;
   border-right: 4px solid rgba(0, 0, 0, 0.1);
 }
