@@ -182,3 +182,8 @@ cite {
     zoom: 1.2;
     margin: 0 4px;
 }
+
+rt {
+    color: #bbb;
+    zoom: 0.8;
+}
