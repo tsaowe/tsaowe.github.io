@@ -125,12 +125,12 @@ table {
 
 /*******************************************/
 
-@font-face {
-    font-family: "Xingkai-SC"; /* 定义一个字体名称 */
-    src: url("/fonts/华文行楷.ttf"); /* 指定字体文件的路径 */
-    font-style: normal; /* 定义字体样式 */
-    font-weight: normal; /* 定义字体权重 */
-}
+/*@font-face {*/
+/*    font-family: "Xingkai-SC"; !* 定义一个字体名称 *!*/
+/*    src: url("/fonts/华文行楷.ttf"); !* 指定字体文件的路径 *!*/
+/*    font-style: normal; !* 定义字体样式 *!*/
+/*    font-weight: normal; !* 定义字体权重 *!*/
+/*}*/
 
 body {
   font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Helvetica,
@@ -160,7 +160,8 @@ a {
 
 blockquote {
   display: flex;
-  font-family: STKaiti, "Xingkai-SC", "Kaiti SC", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.4);
 }
 
 blockquote:before {
@@ -185,4 +186,8 @@ cite {
   position: relative;
   zoom: 1.2;
   margin: 0 4px;
+}
+
+.red {
+    color: rgba(255, 0, 0, 0.5);
 }
