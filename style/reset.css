@@ -147,6 +147,12 @@ a {
   color: #666;
 }
 
+blockquote {
+    display: flex;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.4);
+}
+
 @media (prefers-color-scheme: dark) {
   body {
     background-color: #222;
@@ -156,13 +162,13 @@ a {
   a {
     color: rgba(191, 227, 238, 0.6);
   }
+
+  blockquote {
+    color: rgba(255, 255, 255, 0.5);
+  }
 }
 
-blockquote {
-  display: flex;
-    font-weight: 400;
-    color: rgba(0, 0, 0, 0.4);
-}
+
 
 blockquote:before {
   content: " ";
