@@ -86,6 +86,7 @@ video {
   font: inherit;
   vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
 article,
 aside,
@@ -100,17 +101,21 @@ nav,
 section {
   display: block;
 }
+
 body {
   line-height: 1;
 }
+
 ol,
 ul {
   list-style: none;
 }
+
 blockquote,
 q {
   quotes: none;
 }
+
 blockquote:before,
 blockquote:after,
 q:before,
@@ -118,6 +123,7 @@ q:after {
   content: "";
   content: none;
 }
+
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -132,7 +138,8 @@ table {
 /*    font-weight: normal; !* 定义字体权重 *!*/
 /*}*/
 
-body {
+/*********************************** light mode ***********************************/
+html.light body {
   font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Helvetica,
     Arial, sans-serif;
   font-size: 1em;
@@ -142,35 +149,18 @@ body {
   color: #666;
 }
 
-a {
+html.light a {
   text-decoration: none;
   color: #666;
 }
 
-blockquote {
-    display: flex;
-    font-weight: 400;
-    color: rgba(0, 0, 0, 0.4);
+html.light blockquote {
+  display: flex;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.4);
 }
 
-@media (prefers-color-scheme: dark) {
-  body {
-    background-color: #222;
-    color: #ddd;
-  }
-
-  a {
-    color: rgba(191, 227, 238, 0.6);
-  }
-
-  blockquote {
-    color: rgba(255, 255, 255, 0.5);
-  }
-}
-
-
-
-blockquote:before {
+html.light blockquote:before {
   content: " ";
   display: block;
   width: 1px;
@@ -178,7 +168,7 @@ blockquote:before {
   border-right: 4px solid rgba(0, 0, 0, 0.1);
 }
 
-sup {
+html.light sup {
   font-family: STKaiti, "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial,
     sans-serif;
   margin: 0 6px 0 2px;
@@ -186,7 +176,7 @@ sup {
   position: relative;
 }
 
-cite {
+html.light cite {
   font-family: STKaiti, "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial,
     sans-serif;
   position: relative;
@@ -194,6 +184,60 @@ cite {
   margin: 0 4px;
 }
 
-.red {
-    color: rgba(255, 0, 0, 0.5);
+html.light .red {
+  color: rgba(255, 0, 0, 0.5);
 }
+/*********************************** light mode ***********************************/
+
+/*********************************** dark mode ***********************************/
+
+html.dark body {
+  font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Helvetica,
+    Arial, sans-serif;
+  font-size: 1em;
+  line-height: 200%;
+  margin: 0;
+  padding: 1em;
+  background-color: #222;
+  color: #ddd;
+}
+
+html.dark a {
+  text-decoration: none;
+  color: rgba(191, 227, 238, 0.6);
+}
+
+html.dark blockquote {
+  display: flex;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+html.dark blockquote:before {
+  content: " ";
+  display: block;
+  width: 1px;
+  margin-right: 8px;
+  border-right: 4px solid rgba(255, 255, 255, 0.1);
+}
+
+html.dark sup {
+  font-family: STKaiti, "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
+  margin: 0 6px 0 2px;
+  zoom: 0.6;
+  position: relative;
+}
+
+html.dark cite {
+  font-family: STKaiti, "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
+  position: relative;
+  zoom: 1.2;
+  margin: 0 4px;
+}
+
+html.dark .red {
+  color: rgba(255, 0, 0, 0.5);
+}
+/*********************************** dark mode ***********************************/
