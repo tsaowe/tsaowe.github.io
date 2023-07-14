@@ -29,6 +29,7 @@ export const allHtml = (str='') => {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../style/reset.css">
+  <script src="../javascript/reset.js"></script>
   <title>TODO</title>
 </head>
 <body>
