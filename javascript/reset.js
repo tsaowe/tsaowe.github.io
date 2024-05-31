@@ -1,5 +1,5 @@
 function isDarkMode() {
-  const className = document.querySelector("html").className;
+  const className = localStorage.getItem("color-schema");
   switch (className) {
     case "":
       return false;
@@ -15,8 +15,10 @@ function isDarkMode() {
 function revertHtmlColorSchema() {
   if (isDarkMode()) {
     document.querySelector("html").className = "light";
+    localStorage.setItem("color-schema", "light");
   } else {
     document.querySelector("html").className = "dark";
+    localStorage.setItem("color-schema", "dark");
   }
 }
 
